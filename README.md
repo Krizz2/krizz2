@@ -1,1 +1,1 @@
-# laboratoryofsombiisbycrizz
+#  лаборато́рия
