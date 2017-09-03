@@ -23,7 +23,6 @@ if(e.code==38){obj[w.i].ys-=0.1}
 if(e.code==39){obj[w.i].xs+=0.1}
 if(e.code==40){obj[w.i].ys+=0.1}
 })
-obj[w.i].ys+=0.01
 setInterval(()=>{
 w.emit("msg",{script:'c.width=innerWidth'})
 w.emit("msg",{script:'c.height=innerHeight'})
