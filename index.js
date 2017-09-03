@@ -15,7 +15,7 @@ w.emit("msg",{script:'c=document.createElement("canvas")'})
 w.emit("msg",{script:'document.body.appendChild(c)'})
 w.emit("msg",{script:'ctx=c.getContext("2d")'})
 w.emit("msg",{script:'onkeydown=onkeyup=(e)=>{k[e.keyCode]=e.type=="keydown"}'})
-w.emit("msg",{script:'setInterval(()=>{for(i=0;i<400;i++){if(k[i]){io().emit("key",{code:i})}}}'})
+w.emit("msg",{script:'setInterval(()=>{for(i=0;i<400;i++){if(k[i]){io().emit("key",{code:i})}}}'},1)
 w.on("key",(e)=>{
 console.log(e.code+" from "+w.i)
 if(e.code==37){obj[w.i].xs-=0.1}
