@@ -32,6 +32,6 @@ w.emit("msg",{script:'ctx.fillRect('+obj[i].x+','+obj[i].y+',32,32)'})
 })
 setInterval(()=>{
 for(i in obj){
-obj[i].x+=4
-obj[i].y+=4
+obj[i].x+=obj[i].xs
+obj[i].y+=obj[i].ys
 }},25)
