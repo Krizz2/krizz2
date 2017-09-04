@@ -5,7 +5,7 @@ res.writeHead(200,{"content-type":"text/html"})
 res.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>')
 res.write('<script>io().on("msg",(e)=>{eval(e.script)})</script>')
 res.end()
-}).listen(process.env.PORT||3000,()=>{console.log("Здравствуйте?")})
+}).listen(process.env.PORT||3000,()=>{console.log("Здравствуйте!")})
 ).on("connection",(w)=>{
 w.i=Math.random()
 obj[w.i]={x:0,y:0,xs:1,ys:0}
