@@ -8,7 +8,7 @@ res.end()
 }).listen(process.env.PORT||3000,()=>{console.log("Здравствуйте!")})
 ).on("connection",(w)=>{
 w.i=Math.random()
-obj[w.i]={x:0,y:0,xs:1,ys:0}
+obj[w.i]={x:0,y:0,xs:0,ys:0}
 w.emit("msg",{script:'k=[]'})
 w.emit("msg",{script:'document.body.style.margin="0"'})
 w.emit("msg",{script:'c=document.createElement("canvas")'})
