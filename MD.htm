@@ -1,16 +1,20 @@
 <canvas id="c"></canvas>
 <script>
+obj={}
 document.body.style.margin="0"
 document.title="Mario's Design."
 ctx=c.getContext("2d")
 img=document.createElement("IMG")
 img.src="GFX3.png"
-onmousemove=(event)=>{}
+onmousemove=(event)=>{
+mouse_x=event.clientX
+mouse_y=event.clientY}
+onmousedown=(e)=>{if(e.button==0){
+obj[i]={x:Math.floor(mouse_x/32)*32,y:Math.floor(mouse_y/32)*32}
+}}
 setInterval(()=>{
 c.width=innerWidth
 c.height=innerHeight
-ctx.drawImage(img,0,0,32,32,0,0,32,32)
-ctx.drawImage(img,0,0,32,32,32,32,32,32)
-ctx.drawImage(img,0,0,32,32,64,64,32,32)
+for(i in obj){ctx.drawImage(img,0,0,32,32,obj[i].x-16,obj[i].y-16,32,32)}
 },1)
 </script>
