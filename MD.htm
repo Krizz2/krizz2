@@ -10,7 +10,7 @@ onmousemove=(event)=>{
 mouse_x=event.clientX
 mouse_y=event.clientY}
 onmousedown=(e)=>{if(e.button==0){
-obj[i]={x:Math.floor(mouse_x/32)*32,y:Math.floor(mouse_y/32)*32}
+obj[Math.random()]={x:Math.floor(mouse_x/32)*32,y:Math.floor(mouse_y/32)*32}
 }}
 setInterval(()=>{
 c.width=innerWidth
