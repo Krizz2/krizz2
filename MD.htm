@@ -3,11 +3,11 @@
 document.body.style.margin="0"
 document.title="Mario's Design."
 ctx=c.getContext("2d")
+img=document.createElement("IMG")
+img.src="GFX3.png"
 setInterval(()=>{
 c.width=innerWidth
 c.height=innerHeight
-img=document.createElement("IMG")
-img.src="GFX3.png"
 ctx.drawImage(img,0,0,32,32,32,32,32,32)
 },1)
 </script>
