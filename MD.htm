@@ -7,8 +7,8 @@ ctx=c.getContext("2d")
 img=document.createElement("IMG")
 img.src="GFX3.png"
 onmousemove=(event)=>{
-mouse_x=event.clientX
-mouse_y=event.clientY}
+mouse_x=event.clientX+16
+mouse_y=event.clientY+16}
 onmousedown=(e)=>{if(e.button==0){
 obj[Math.random()]={x:Math.floor(mouse_x/32)*32,y:Math.floor(mouse_y/32)*32}
 }}
