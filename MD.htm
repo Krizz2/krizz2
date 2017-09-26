@@ -5,11 +5,12 @@ document.title="Mario's Design."
 ctx=c.getContext("2d")
 img=document.createElement("IMG")
 img.src="GFX3.png"
+onmousemove=(event)=>{}
 setInterval(()=>{
 c.width=innerWidth
 c.height=innerHeight
 ctx.drawImage(img,0,0,32,32,32,32,32,32)
-ctx.drawImage(img,0,0,32,32,32,32,32,32)
-ctx.drawImage(img,0,0,32,32,32,32,32,32)
+ctx.drawImage(img,32,32,32,32,32,32,32,32)
+ctx.drawImage(img,0,32,32,32,32,32,32,32)
 },1)
 </script>
