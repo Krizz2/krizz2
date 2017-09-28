@@ -5,7 +5,7 @@ c=document.createElement("canvas")
 ctx=c.getContext("2d")
 body.style.margin="0"
 body.appendChild(c)
-img=ctx.getImageData(0,0,1000000,1000000)
+img=ctx.getImageData(0,0,10000,10000)
 array=new Uint32Array(img.data.buffer)
 setInterval(()=>{
 c.width=innerWidth
@@ -13,7 +13,7 @@ c.height=innerHeight
 ctx.putImageData(img,0,0)
 for(x=0;x<c.width;x++){
 for(y=0;y<c.width;y++){
-array[x+y*1000000]=0xFF0000FF
+array[x+y*10000]=0xFF0000FF
 }}},1)
 },1000)
 </script>
