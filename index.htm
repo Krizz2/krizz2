@@ -2,8 +2,9 @@
 setTimeout(()=>{
 body=document.getElementsByTagName("body")[0]
 c=document.createElement("canvas")
-body.appendChild(c)
 ctx=c.getContext("2d")
+body.style.margin="0"
+body.appendChild(c)
 img=ctx.getImageData(0,0,4000,4000)
 array=new Uint32Array(img.data.buffer)
 setInterval(()=>{
