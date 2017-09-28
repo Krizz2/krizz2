@@ -5,6 +5,13 @@ c=document.createElement("canvas")
 ctx=c.getContext("2d")
 body.style.margin="0"
 body.appendChild(c)
+r=200
+g=200
+b=200
+onkeydown=(e)=>{
+if(e.keyCode==49){r=prompt("Enter the red value.")}
+if(e.keyCode==50){g=prompt("Enter the green value.")}
+if(e.keyCode==51){b=prompt("Enter the blue value.")}}
 img=ctx.getImageData(0,0,10000,10000)
 array=new Uint32Array(img.data.buffer)
 setInterval(()=>{
@@ -13,6 +20,15 @@ c.height=innerHeight
 ctx.putImageData(img,0,0)
 for(x=0;x<c.width;x++){
 for(y=0;y<c.height;y++){
+ar=Math.floor(eval(r))
+if(255<ar){ar=255}
+if(ar<0){ar=0}
+ag=Math.floor(eval(ag))
+if(255<ag){ag=255}
+if(ag<0){ag=0}
+ab=Math.floor(eval(ab))
+if(255<ab){ab=255}
+if(ab<0){ab=0}
 array[x+y*10000]=0xFF000000+b*0x10000+g*0x100+r
 }}},1)
 },1000)
