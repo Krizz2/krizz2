@@ -20,15 +20,6 @@ c.height=innerHeight
 ctx.putImageData(img,0,0)
 for(x=0;x<c.width;x++){
 for(y=0;y<c.height;y++){
-ar=Math.floor(eval(r))
-if(255<ar){ar=255}
-if(ar<0){ar=0}
-ag=Math.floor(eval(g))
-if(255<ag){ag=255}
-if(ag<0){ag=0}
-ab=Math.floor(eval(b))
-if(255<ab){ab=255}
-if(ab<0){ab=0}
 array[x+y*10000]=0xFF000000+b*0x10000+g*0x100+r
 }}},1)
 },1000)
