@@ -5,7 +5,7 @@ c=document.createElement("canvas")
 ctx=c.getContext("2d")
 body.style.margin="0"
 body.appendChild(c)
-img=ctx.getImageData(0,0,4000,4000)
+img=ctx.getImageData(0,0,10000,10000)
 array=new Uint32Array(img.data.buffer)
 setInterval(()=>{
 c.width=innerWidth
